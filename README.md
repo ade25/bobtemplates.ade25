@@ -31,7 +31,7 @@ Use it by passing it as configuration parameter (example):
 $ mrbob --config ~/.mrbob mrbob:template_sample/
 ```
 
-## Creating a Pyramid project
+## Creating a project (Pyramid example)
 
 To create a Pyramid project first install (or upgrade to latest) *mr.bob* and
 the *ade25.bobtemplates* package and then run `mrbob`:
@@ -60,10 +60,14 @@ if there is no answer.
 And your package is ready! Let's build the development environment and see
 if all tests pass::
 
-    $ cd foo
-    $ make
+```bash
+$ cd foo
+$ make
+```
 
 Great, you are now ready to start Pyramid::
 
-    $ make db
-    $ bin/pserve etc/development.ini
+```bash
+$ make db
+$ bin/pserve etc/development.ini
+```
