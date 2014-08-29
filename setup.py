@@ -4,7 +4,7 @@ from setuptools import setup
 version = '1.0.0'
 
 setup(
-    name='ade25.bobtemplates',
+    name='bobtemplates.ade25',
     version=version,
     description="Templates for ade25 projects.",
     long_description=open("README.rst").read(),
@@ -19,12 +19,12 @@ setup(
         "Topic :: Utilities",
     ],
     keywords='',
-    author='ade25 Ltd.',
-    author_email='info@ade25.com',
-    url='https://github.com/ade25/ade25.bobtemplates',
+    author='ade25',
+    author_email='info@ade25.de',
+    url='https://github.com/ade25/bobtemplates.ade25',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['ade25'],
+    namespace_packages=['bobtemplates'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
