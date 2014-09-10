@@ -28,7 +28,15 @@ package.namespace = ade25
 Use it by passing it as configuration parameter (example):
 
 ```bash
-$ mrbob --config ~/.mrbob mrbob:template_sample/
+$ mrbob --config ~/.mrbob bobtemplate:template_name
+```
+
+Using mrbob inside a buildout requires you to change directories (example
+creating a diazo theme package)
+
+```bash
+$ cd src/
+$ $ mrbob --config ~/.mrbob projectname.sitetheme bobtemplate:diazo
 ```
 
 ## Creating a project (Pyramid example)
