@@ -18,7 +18,9 @@ $ cd src/
 $ $ mrbob --config ~/.mrbob builodut.projectname bobtemplate:plone
 ```
 
-Answer the questions *mr.bob* might have for you and 
+Answer the questions *mr.bob* might have for you concerning the desired target production host and port settings.
+
+After *mr.bob* is done you can import the generated plone project into your SCM.
 
 
 ## Installation
@@ -39,4 +41,4 @@ $ bin/buildout -Nc development.cfg
 
 ## Configuration
 
-...
+The generated buildout asumes that the developer has setup a local egg cache and therefore provides a buildout 'default.cfg'.
