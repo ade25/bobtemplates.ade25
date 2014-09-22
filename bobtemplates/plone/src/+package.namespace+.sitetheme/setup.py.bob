@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the {{{ package.namespace }}}.{{{ package.name }}} package."""
+"""Installer for the {{{ package.namespace }}}.sitetheme package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -12,12 +12,12 @@ def read(*rnames):
 
 long_description = \
     read('README.rst') + \
-    read('docs', 'CHANGELOG.rst') + \
-    read('docs', 'LICENSE.rst')
+    read('docs', 'HISTORY.txt') + \
+    read('docs', 'LICENSE.txt')
 
 setup(
-    name='{{{ package.namespace }}}.{{{ package.name }}}',
-    version='{{{ package.version }}}',
+    name='{{{ package.namespace }}}.sitetheme',
+    version='1.0.0',
     description="{{{ package.description }}}",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -36,13 +36,9 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'five.grok',
-        'five.pt',
-        'Pillow',
-        'Plone',
-        'plone.api',
+        'plone.app.theming',
+        'plone.app.themingplugins',
         'setuptools',
-        'z3c.jbot',
     ],
     extras_require={
         'test': [
@@ -54,7 +50,6 @@ setup(
             'coverage',
             'flake8',
             'jarn.mkrelease',
-            'ade25.loginas',
             'plone.app.debugtoolbar',
             'plone.reload',
             'Products.Clouseau',
