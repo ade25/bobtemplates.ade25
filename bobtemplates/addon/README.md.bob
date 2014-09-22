@@ -11,14 +11,14 @@
 
 This package provides a Plone addon as an installable Python egg package.
 
-The generated Python package hold the necessary scaffold to kickstart theme
-development.
+The generated Python package hold the necessary scaffold to add content types
+via the 'contenttype' template and to add functionality.
 
-In order to get productive you still need to generate a theme
+In order to get productive you still need to generate a contenttype
 
 ```bash
-$ cd {{{ package.namespace }}}.{{{ package.name }}}/src/{{{ package.namespace }}}/{{{ package.name }}}/resources
-$ yo generator-diazotheme
+$ cd {{{ package.namespace }}}.{{{ package.name }}}/src/{{{ package.namespace }}}/{{{ package.name }}}/
+$ mrbob --config ~/.mrbob.ini -O example_type bobtemplates:contenttype
 
 ```
 
@@ -28,8 +28,3 @@ $ yo generator-diazotheme
 To install `{{{ package.namespace }}}.{{{ package.name }}}` you simply add ``{{{ package.namespace }}}.{{{ package.name }}}``
 to the list of eggs in your buildout, run buildout and restart Plone.
 Then, install `{{{ package.namespace }}}.{{{ package.name }}}` using the Add-ons control panel.
-
-
-## Configuration
-
-...
