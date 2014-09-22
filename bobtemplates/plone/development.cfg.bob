@@ -21,9 +21,7 @@ extends =
 
 
 auto-checkout =
-    ade25.banner
     ade25.fabfiles
-    ade25.panelpage
     ade25.toolbar
     bobtemplates.ade25
     sauna.reload
@@ -50,7 +48,7 @@ zope-conf-additional =
 # Change the site-id to the appropriate value
 # This variable will be used to compose filesystem paths
 [plone-site]
-site-id = plonesite
+site-id = {{{ package.namespace }}}
 
 [test]
 recipe = zc.recipe.testrunner
@@ -82,36 +80,8 @@ recipe = zc.recipe.egg
 eggs =
     mr.bob
     bobtemplates.ade25
-#    bobtemplates.kotti
-#    bobtemplates.niteoweb
     ${eggs:main}
     ${eggs:devtools}
-
-[paster]
-recipe = zc.recipe.egg
-eggs =
-    ZopeSkel
-    zopeskel.dexterity
-    PasteScript
-    PasteDeploy
-    ${instance-debug:eggs}
-entry-points = paster=paste.script.command:run
-
-[zopeskel]
-recipe = zc.recipe.egg
-eggs =
-    ZopeSkel
-    zopeskel.dexterity
-
-[templer]
-recipe = zc.recipe.egg
-eggs =
-   PasteScript
-   templer.core
-   templer.zope
-   templer.plone
-   templer.dexterity
-   ${instance:eggs}
 
 [checkversions]
 recipe = zc.recipe.egg
