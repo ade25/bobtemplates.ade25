@@ -7,7 +7,10 @@ Plone and Pyramid projects.
 Available templates are:
 
 - *Pyramid*: a template for a full featured Pyramid project
-- *Plone*: a template for a full featured Plone add-on
+- *Plone*: a template for a full featured Plone buildout
+- *Addon*: a template for a Plone addon including Dexterity
+- *contenttype*: a template for a single Dexterity contenttype
+- *Diazo* (deprecated): a template for a Diazo theme package skeleton
 
 
 ## Global settings

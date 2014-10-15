@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""Module providing {{{ contenttype.name }}} content type functionality"""
+
+from five import grok
+from plone import api
+from zope import schema
+
+from plone.app.textfield import RichText
+from plone.dexterity.content import Container
+from plone.directives import form
+from plone.namedfile.field import NamedBlobImage, NamedBlobFile
+from plone.namedfile.interfaces import IImageScaleTraversable
+from z3c.form import group, field
+from z3c.relationfield.schema import RelationList, RelationChoice
+
+from {{{ package.namespace }}}.{{{ package.name }}} import MessageFactory as _
+
+
+class I{{{ contenttype.name }}}(form.Schema, IImageScaleTraversable):
+    """
+    A project and customer dashboard
+    """
+
+
+class {{{ contenttype.name }}}(Container):
+    grok.implements(IDashboard)
+
+
+class View(grok.View):
+    grok.context(I{{{ contenttype.name }}})
+    grok.require('zope2.View')
+    grok.name('view')
