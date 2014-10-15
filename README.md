@@ -22,7 +22,6 @@ author.name = John Doe
 author.email = john@ade25.de
 author.github.user = ade25
 author.irc = irc.freenode.org#ade25
-package.namespace = ade25
 ```
 
 Use it by passing it as configuration parameter (example):
@@ -36,7 +35,7 @@ creating a diazo theme package)
 
 ```bash
 $ cd src/
-$ $ mrbob --config ~/.mrbob projectname.sitetheme bobtemplate:diazo
+$ ../bin/mrbob --config ~/.mrbob -O projectname.sitetheme bobtemplates:plone
 ```
 
 ## Creating a project (Pyramid example)
