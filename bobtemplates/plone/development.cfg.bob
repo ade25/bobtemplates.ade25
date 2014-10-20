@@ -24,6 +24,7 @@ auto-checkout =
     ade25.fabfiles
     ade25.toolbar
     bobtemplates.ade25
+    {{{ package.namespace }}}.sitetheme
     sauna.reload
 
 always-checkout = force
