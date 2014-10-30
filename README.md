@@ -38,11 +38,7 @@ creating a diazo theme package)
 
 ```bash
 $ cd src/
-<<<<<<< HEAD
-$ ../bin/mrbob --config ~/.mrbob -O projectname.sitetheme bobtemplates:plone
-=======
-$ $ mrbob --config ~/.mrbob projectname.sitetheme bobtemplates:diazo
->>>>>>> 0c9d2f736030dffeacb33907a7e5538353b1e0d3
+$ ../bin/mrbob --config ~/.mrbob -O projectname bobtemplates:plone
 ```
 
 ## Setup local development environment
