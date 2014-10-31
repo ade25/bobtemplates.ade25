@@ -30,9 +30,8 @@ setup(
     author_email='{{{ author.email }}}',
     url='http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}',
     license='BSD',
-    packages=find_packages('src', exclude=['ez_setup']),
+    packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['{{{ package.namespace }}}'],
-    package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
     install_requires=[

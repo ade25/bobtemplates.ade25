@@ -25,13 +25,12 @@ author.name = John Doe
 author.email = john@ade25.de
 author.github.user = ade25
 author.irc = irc.freenode.org#ade25
-package.namespace = ade25
 ```
 
 Use it by passing it as configuration parameter (example):
 
 ```bash
-$ mrbob --config ~/.mrbob bobtemplate:template_name
+$ mrbob --config ~/.mrbob -O projectname bobtemplates:template_name
 ```
 
 Using mrbob inside a buildout requires you to change directories (example
@@ -39,8 +38,32 @@ creating a diazo theme package)
 
 ```bash
 $ cd src/
-$ $ mrbob --config ~/.mrbob projectname.sitetheme bobtemplate:diazo
+$ ../bin/mrbob --config ~/.mrbob -O projectname bobtemplates:plone
 ```
+
+## Setup local development environment
+
+In orde to run mrbob templates for project scaffolding you need to setup a 
+dedicated virtual env (e.g. unter ~/dev/mrbob)
+
+```bash
+$ ../path/to/python/bin/virtualenv-2.7 mrbob
+$ cd ./mrbob
+$ git clone git@github.com:ade25/bobtemplates.ade25.git
+$ cd ./bobtemplates.ade25
+$ ../bin/python setup.py develop
+```
+
+## Creating a project (Plone)
+
+To create a full featured buildout for a Plone project including ready to use deployment configurations you need to run `mrbob` like this:
+
+```bash
+$ mrbob --config ~/.mrbob -O projectname bobtemplates:plone
+```
+
+Answer the questions accordingly.
+
 
 ## Creating a project (Pyramid example)
 
