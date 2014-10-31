@@ -8,9 +8,9 @@ fabric-parts =
     fabric-config
 
 [fabric]
-username = 'Ade25 DevOPs'
-host = z1
-hostname = z1.ade25.de
+username = ade25-devops
+host = {{{ package.hostname }}}
+hostname = {{{ package.hostname }}}.ade25.de
 webserver = /opt/webserver/buildout.webserver
 directory = /opt/sites/${plone-site:site-id}/buildout.${plone-site:site-id}
 

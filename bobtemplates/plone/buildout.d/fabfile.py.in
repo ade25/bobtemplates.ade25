@@ -15,14 +15,14 @@ env.port = '22'
 env.user = 'root'
 env.hosts = ['${fabric:host}']
 env.hostname = '${fabric:host}'
-env.webserver = '${fabric:directory}'
+env.webserver = '/opt/webserver/buidlout.webserver'
 env.code_root = '${fabric:directory}'
 env.local_root = '${buildout:directory}'
-env.sitename = 'hph'
+env.sitename = '{{{ package.namespace }}}'
 env.code_user = 'root'
 env.prod_user = 'www'
 # Uncomment and add your name here
-env.actor = '${fabric:username}'
+env.actor = '{{{ author.name }}}'
 
 
 @task
@@ -84,5 +84,5 @@ def get_data():
 @task
 def ctl(*cmd):
     """Runs an arbitrary supervisorctl command."""
-    with cd(env.code_root):
+    with cd(env.webserver):
         run('nice bin/supervisorctl ' + ' '.join(cmd))
