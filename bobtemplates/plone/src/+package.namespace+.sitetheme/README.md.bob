@@ -1,11 +1,13 @@
 # {{{ package.namespace }}}.sitetheme
 
-## {{{ package.description }}}
+## Introduction
 
-* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Documentation @ ReadTheDocs <http://{{{ package.namespace.replace('.', '') }}}{{{ package.name.replace('.', '') }}}.readthedocs.org>`_
-* `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
+This package provides an installable python package that can be used to setup
+a Plone site theme.
+
+* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}>`_
+* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.sitetheme>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}>`_
 
 ## How it works
 
@@ -16,7 +18,7 @@ development.
 In order to get productive you still need to generate a theme
 
 ```bash
-$ cd {{{ package.namespace }}}.{{{ package.name }}}/src/{{{ package.namespace }}}/{{{ package.name }}}/resources
+$ cd ${buildout:directory}/src/{{{ package.namespace }}}.sitethem/{{{ package.namespace }}}/sitetheme/resources
 $ yo generator-diazotheme
 
 ```
@@ -24,9 +26,9 @@ $ yo generator-diazotheme
 
 ## Installation
 
-To install `{{{ package.namespace }}}.{{{ package.name }}}` you simply add ``{{{ package.namespace }}}.{{{ package.name }}}``
+To install `{{{ package.namespace }}}.sitetheme` you simply add ``{{{ package.namespace }}}.sitetheme``
 to the list of eggs in your buildout, run buildout and restart Plone.
-Then, install `{{{ package.namespace }}}.{{{ package.name }}}` using the Add-ons control panel.
+Then, install `{{{ package.namespace }}}.sitetheme` using the Add-ons control panel.
 
 
 ## Configuration

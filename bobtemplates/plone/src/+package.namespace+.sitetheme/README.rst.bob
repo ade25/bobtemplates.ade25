@@ -1,31 +1,30 @@
 ====================
-{{{ package.namespace }}}.{{{ package.name }}}
+{{{ package.namespace }}}.sitetheme
 ====================
 
-{{{ package.description }}}
+Site theme package for the {{{ package.namespace }}} project based on Diazo and
+plone.app.theming
 
-* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Documentation @ ReadTheDocs <http://{{{ package.namespace.replace('.', '') }}}{{{ package.name.replace('.', '') }}}.readthedocs.org>`_
-* `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
+* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.sitetheme>`_
+* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.sitetheme>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}.sitetheme>`_
 
 How it works
 ============
 
-...
+This package provides the scaffolding for a full featured Plone theme. It does
+setup a resource directory but does not provide the actual theme. The generation
+of the actual theme compontents is left to the more appropriate toolchain
+provided by state of the art frontend development.
+
+At the time of writing this does require the user to generate a theme
+infrastructure by running the `generator-diazotheme` via `yeoman` provided by
+git@github.com:ade25/generator-diazotheme.git
 
 
 Installation
 ============
 
-To install `{{{ package.namespace }}}.{{{ package.name }}}` you simply add ``{{{ package.namespace }}}.{{{ package.name }}}``
+To install `{{{ package.namespace }}}.sitetheme` you simply add ``{{{ package.namespace }}}.sitetheme``
 to the list of eggs in your buildout, run buildout and restart Plone.
-Then, install `{{{ package.namespace }}}.{{{ package.name }}}` using the Add-ons control panel.
-
-
-Configuration
-=============
-
-...
-
-
+Then, install `{{{ package.namespace }}}.sitetheme` using the Add-ons control panel.
