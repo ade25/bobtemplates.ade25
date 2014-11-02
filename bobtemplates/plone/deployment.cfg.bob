@@ -46,7 +46,7 @@ instance        = 127.0.0.1
 [ports]
 http            = 80
 https           = 443
-instance        = 8401
+instance        = {{{ production.port }}}
 
 [users]
 # Process owners for nginx, varnish, haproxy, memcached and Zope
@@ -79,7 +79,7 @@ fallback = /system-error
 
 [sites]
 # Plone site ids - used in virtual hosting
-main = example
+main = {{{ package.namespace }}}
 
 # Zope instance template
 [instance]
