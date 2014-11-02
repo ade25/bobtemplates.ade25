@@ -8,7 +8,6 @@ fabric-parts =
     fabric-config
 
 [fabric]
-<<<<<<< HEAD
 username = ade25-devops
 host = {{{ package.hostname }}}
 hostname = {{{ package.hostname }}}.ade25.de
