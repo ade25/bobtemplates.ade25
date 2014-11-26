@@ -21,9 +21,7 @@ main =
 #   myproject.sitecontent
 
 custom =
-  ade25.fabfiles
   ade25.toolbar
-  bobtemplates.ade25
 
 addon =
   Pillow
@@ -37,6 +35,8 @@ test =
 #  example.sitetheme [test]
 
 devtools =
+  ade25.fabfiles
+  bobtemplates.ade25
   bpython
   ipdb
   plone.reload
