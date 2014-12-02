@@ -42,6 +42,8 @@ eggs =
     ${eggs:addon}
     ${eggs:devtools}
 environment-vars =
+    PTS_LANGUAGES en de
+    zope_i18n_allowed_languages en de
     zope_i18n_compile_mo_files true
 zope-conf-additional =
     %import sauna.reload
