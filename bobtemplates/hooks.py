@@ -91,14 +91,12 @@ def pre_email(configurator, question):
         question.default = default
 
 
-def post_travis(configurator, question, answer):
+def post_cluster(configurator, question, answer):
     """ Skip questions on travis.
     """
     value = to_boolean(configurator, question, answer)
-    mto = 'info@ade25.de'
     if not value:
-        configurator.variables['travis.notifications.type'] = 'email'
-        configurator.variables['travis.notifications.destination'] = mto
+        configurator.variables['production.cluster.enabled'] = False
     return value
 
 
@@ -111,49 +109,18 @@ def cleanup_package(configurator):
     # find out what to delete
     to_delete = []
 
-    if not configurator.variables['package.profile']:
+    if not configurator.variables['production.cluster.enabled']:
         to_delete.extend([
-            "{0}/profiles",
-            "{0}/testing.zcml",
-            "{0}/setuphandlers.py",
-            "{0}/interfaces.py",
-        ])
-
-    if not configurator.variables['package.setuphandlers']:
-        to_delete.extend([
-            "{0}/setuphandlers.py",
-        ])
-
-    if not configurator.variables['package.locales']:
-        to_delete.extend([
-            "{0}/locales",
-        ])
-
-    if not configurator.variables['package.example']:
-        to_delete.extend([
-            "{0}/browser/templates",
-            "{0}/browser/views.py",
-        ])
-
-    if not configurator.variables['package.testing']:
-        to_delete.extend([
-            "{0}/tests",
-            "{0}/testing.py",
-            "{0}/testing.zcml",
-            "{0}/.coveragerc".format(configurator.target_directory),
-            "{0}/buildout.d/jenkins.cfg".format(configurator.target_directory),
-        ])
-
-    if not configurator.variables['travis.integration.enabled']:
-        to_delete.extend([
-            "{0}/.travis.yml".format(configurator.target_directory),
-            "{0}/travis.cfg".format(configurator.target_directory),
-        ])
-
-    if not configurator.variables['package.theme']:
-        to_delete.extend([
-            "{0}/theme",
-            "{0}/profiles/default/theme.xml",
+            "{0}/htdocs".format(base_path),
+            "{0}/buildout.d/haproxy.cfg".format(base_path),
+            "{0}/buildout.d/haproxy.conf".format(base_path),
+            "{0}/buildout.d/nginx.cfg".format(base_path),
+            "{0}/buildout.d/nginx.conf".format(base_path),
+            "{0}/buildout.d/varnish.cfg".format(base_path),
+            "{0}/buildout.d/varnish.vcl".format(base_path),
+            "{0}/buildout.d/runscript.cfg".format(base_path),
+            "{0}/buildout.d/startscript.ini".format(base_path),
+            "{0}/etc".format(base_path),
         ])
 
     # remove parts
