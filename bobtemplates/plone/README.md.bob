@@ -1,4 +1,4 @@
-# {{{ package.namespace }}}.{{{ package.name }}}
+# {{{ package.namespace }}}
 
 ## {{{ package.description }}}
 
@@ -9,7 +9,7 @@
 
 ## How it works
 
-This project templates provides a full blown Plone project environment. I tcomes with a preconfigured project specific theme package located under the _src_ directory. 
+This project templates provides a full blown Plone project environment. It comes with a preconfigured project specific theme package located under the _src_ directory.
 
 In order to get started you need to first generate a project environment:
 

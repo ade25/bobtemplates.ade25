@@ -4,7 +4,7 @@
 [buildout]
 parts =
     ${buildout:lxml-parts}
-    {{% if production.cluster.enabled %}}
+    {{% if production.cluster %}}
     zeoserver
     instance1
     instance2

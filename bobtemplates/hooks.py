@@ -109,7 +109,7 @@ def cleanup_package(configurator):
     # find out what to delete
     to_delete = []
 
-    if not configurator.variables['production.cluster.enabled']:
+    if not configurator.variables['production.cluster']:
         to_delete.extend([
             "{0}/htdocs".format(base_path),
             "{0}/buildout.d/haproxy.cfg".format(base_path),
