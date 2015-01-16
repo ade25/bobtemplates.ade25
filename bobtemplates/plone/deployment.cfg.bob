@@ -21,6 +21,12 @@ parts =
     backup
     repozo
 
+    {{% if production.cluster %}}
+    ${buildout:haproxy-parts}
+    ${buildout:varnish-parts}
+    ${buildout:nginx-parts}
+    {{% endif %}}
+
 extends =
     packages.cfg
     buildout.d/lxml.cfg
@@ -149,6 +155,7 @@ fallback = /system-error
 main = {{{ package.namespace }}}
 
 {{% if production.cluster %}}
+[zeoserver]
 recipe = plone.recipe.zeoserver
 zeo-address = ${ports:zeoserver}
 effective-user = ${users:zope-process}

@@ -11,7 +11,11 @@ fabric-parts =
 username = ade25-devops
 host = {{{ production.hostname }}}
 hostname = {{{ production.hostname }}}.ade25.de
+{{% if production.cluster %}}
+webserver = ${:directory}
+{{% else %}}
 webserver = /opt/webserver/buildout.webserver
+{{% endif %}}
 directory = /opt/sites/${plone-site:site-id}/buildout.${plone-site:site-id}
 
 [fabric-build]
