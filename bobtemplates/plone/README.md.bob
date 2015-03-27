@@ -1,26 +1,26 @@
-# {{{ package.namespace }}}.{{{ package.name }}}
+# {{{ package.name }}}
 
 ## {{{ package.description }}}
 
-* `Source code @ GitHub <https://github.com/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}.{{{ package.name }}}>`_
-* `Documentation @ ReadTheDocs <http://{{{ package.namespace.replace('.', '') }}}{{{ package.name.replace('.', '') }}}.readthedocs.org>`_
-* `Continuous Integration @ Travis-CI <http://travis-ci.org/{{{ author.github.user }}}/{{{ package.namespace }}}.{{{ package.name }}}>`_
+* `Source code @ GitHub <https://github.com/a25kk/{{{ package.namespace }}}>`_
+* `Releases @ PyPI <http://pypi.python.org/pypi/{{{ package.namespace }}}>`_
+* `Documentation @ ReadTheDocs <http://{{{ package.namespace.replace('.', '') }}}.readthedocs.org>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/kreativkombinat/{{{ package.namespace }}}>`_
 
 ## How it works
 
-This project templates provides a full blown Plone project environment. I tcomes with a preconfigured project specific theme package located under the _src_ directory. 
+This project templates provides a full blown Plone project environment. It comes with a preconfigured project specific theme package located under the _src_ directory.
 
 In order to get started you need to first generate a project environment:
 
 ```bash
 $ cd src/
-$ $ mrbob --config ~/.mrbob builodut.projectname bobtemplate:plone
+$ $ mrbob --config ~/.mrbob buildout.projectname bobtemplate:plone
 ```
 
 Answer the questions *mr.bob* might have for you concerning the desired target production host and port settings.
 
-After *mr.bob* is done you can import the generated plone project into your SCM.
+After *mr.bob* is done you can import the generated plone project into your SCM and delete this part from the README.
 
 
 ## Installation
@@ -30,10 +30,10 @@ a ready to work on setup. The relevant steps to get started with a new
 development environment would be:
 
 ``` bash
-$ virtualenv-2.7 {{{ package.name }}}
-$ cd ./{{{ package.name }}}
-$ git clone gitlgithub.com:username/{{{ package.namespace }}}.{{{ package.name }}}.git {{{ package.namespace }}}.{{{ package.name }}}
-$ cd ./{{{ package.namespace }}}.{{{ package.name }}}
+$ virtualenv-2.7 {{{ package.namespace }}}
+$ cd ./{{{ package.namespace }}}
+$ git clone git@github.com:username/{{{ package.namespace }}}.git buildout.{{{ package.namespace }}}
+$ cd ./buildout.{{{ package.namespace }}}
 $ python bootstrap.py -c development.cfg
 $ bin/buildout -Nc development.cfg
 ```

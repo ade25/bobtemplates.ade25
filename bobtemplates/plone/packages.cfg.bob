@@ -29,6 +29,7 @@ addon =
   plone.app.caching
   plone.app.contenttypes
   plone.app.widgets
+  tus
 
 test =
 # Add custom packages here

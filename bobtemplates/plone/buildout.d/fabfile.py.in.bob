@@ -5,6 +5,7 @@ from fabric.api import env
 from fabric.api import run
 
 from ade25.fabfiles import project
+from ade25.fabfiles.server import controls
 
 from slacker import Slacker
 slack = Slacker('xoxp-2440800772-2440800774-2520374751-468e84')
@@ -33,8 +34,13 @@ def deploy(actor=None):
         hostname=env.get('hostname'),
         actor=actor or env.get('actor') or getpass.getuser(),
     )
+    {{% if production.cluster %}}
+    controls.update()
+    project.cluster.restart_clients()
+    {{% else %}}
     project.site.update()
     project.site.restart()
+    {{% endif %}}
     msg = '[%(hostname)s] *%(sitename)s* deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
@@ -51,7 +57,11 @@ def deploy_full(actor=None):
     )
     project.site.update()
     project.site.build()
+    {{% if production.cluster %}}
+    project.cluster.restart_clients()
+    {{% else %}}
     project.site.restart()
+    {{% endif %}}
     msg = '[%(hostname)s] *%(sitename)s* deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
@@ -68,7 +78,11 @@ def rebuild(actor=None):
     )
     project.site.update()
     project.site.build_full()
+    {{% if production.cluster %}}
+    project.cluster.restart_clients()
+    {{% else %}}
     project.site.restart()
+    {{% endif %}}
     msg = '[%(hostname)s] *%(sitename)s* rebuild by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
