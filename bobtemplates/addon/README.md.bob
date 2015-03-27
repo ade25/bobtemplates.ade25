@@ -11,16 +11,11 @@
 
 This package provides a Plone addon as an installable Python egg package.
 
-The generated Python package hold the necessary scaffold to add content types
-via the 'contenttype' template and to add functionality.
+The generated Python package holds an example content type `ContentPage` which
+provides a folderish version of the default **Page** document type.
 
-In order to get productive you still need to generate a contenttype
-
-```bash
-$ cd {{{ package.namespace }}}.{{{ package.name }}}/src/{{{ package.namespace }}}/{{{ package.name }}}/
-$ mrbob --config ~/.mrbob.ini -O example_type bobtemplates:contenttype
-
-```
+The implementation is kept simple on purpose and asumes that the developer will
+add further content manually.
 
 
 ## Installation
