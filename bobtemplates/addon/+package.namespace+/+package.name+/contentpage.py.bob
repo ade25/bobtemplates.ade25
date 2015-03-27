@@ -6,7 +6,7 @@ from plone.directives import form
 from plone.namedfile.interfaces import IImageScaleTraversable
 from zope.interface import implementer
 
-from ck.sitecontent import MessageFactory as _
+from {{{ package.namespace }}}.sitecontent import MessageFactory as _
 
 
 class IContentPage(form.Schema, IImageScaleTraversable):

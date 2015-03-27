@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <object name="ck.sitecontent.contentpage"
    meta_type="Dexterity FTI"
-   i18n:domain="lra.sitecontent" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+   i18n:domain="{{{ package.namespace }}}.sitecontent" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
   <property name="title" i18n:translate="">Contentpage</property>
   <property name="description"
     i18n:translate="">Folderish content page</property>
   <property name="icon_expr">string:${portal_url}/folder_icon.png</property>
-  <property name="factory">ck.sitecontent.contentpage</property>
+  <property name="factory">{{{ package.namespace }}}.sitecontent.contentpage</property>
   <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-    <element value="ck.sitecontent.contentpage" />
+    <element value="{{{ package.namespace }}}.sitecontent.contentpage" />
     <element value="Image" />
   </property>
   <property name="allow_discussion">True</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">ck.sitecontent.contentpage.IContentPage</property>
-  <property name="klass">ck.sitecontent.contentpage.ContentPage</property>
+  <property name="schema">{{{ package.namespace }}}.sitecontent.contentpage.IContentPage</property>
+  <property name="klass">{{{ package.namespace }}}.sitecontent.contentpage.ContentPage</property>
 
   <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
