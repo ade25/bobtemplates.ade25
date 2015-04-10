@@ -10,7 +10,7 @@
       class=".contentpage.ContentPageView"
       template="contentpage.pt"
       permission="zope2.View"
-      layer="..interfaces.ILRASiteContentLayer"
+      layer="..interfaces.I{{{ package.namespace.capitalize() }}}{{{ package.name.capitalize() }}}Layer"
       />
 
 </configure>
