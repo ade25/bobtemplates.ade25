@@ -34,13 +34,13 @@ def deploy(actor=None):
         hostname=env.get('hostname'),
         actor=actor or env.get('actor') or getpass.getuser(),
     )
-    {{% if production.cluster %}}
+{{% if production.cluster %}}
     controls.update()
     project.cluster.restart_clients()
-    {{% else %}}
+{{% else %}}
     project.site.update()
     project.site.restart()
-    {{% endif %}}
+{{% endif %}}
     msg = '[%(hostname)s] *%(sitename)s* deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
@@ -57,11 +57,11 @@ def deploy_full(actor=None):
     )
     project.site.update()
     project.site.build()
-    {{% if production.cluster %}}
+{{% if production.cluster %}}
     project.cluster.restart_clients()
-    {{% else %}}
+{{% else %}}
     project.site.restart()
-    {{% endif %}}
+{{% endif %}}
     msg = '[%(hostname)s] *%(sitename)s* deployed by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
@@ -78,15 +78,22 @@ def rebuild(actor=None):
     )
     project.site.update()
     project.site.build_full()
-    {{% if production.cluster %}}
+{{% if production.cluster %}}
     project.cluster.restart_clients()
-    {{% else %}}
+{{% else %}}
     project.site.restart()
-    {{% endif %}}
+{{% endif %}}
     msg = '[%(hostname)s] *%(sitename)s* rebuild by %(actor)s' % opts
     user = 'fabric'
     icon = ':shipit:'
     slack.chat.post_message('#general', msg, username=user, icon_emoji=icon)
+
+
+@task
+def develop():
+    """ Restart all """
+    with cd(env.code_root):
+        run('nice bin/develop up')
 
 
 @task
