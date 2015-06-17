@@ -4,7 +4,7 @@
 [buildout]
 parts =
     ${buildout:lxml-parts}
-    {{% if production.cluster %}}
+{{% if production.cluster %}}
     zeoserver
     instance1
     instance2
@@ -12,29 +12,29 @@ parts =
     instance4
     instance-debug
     supervisor
-    {{% else %}}
+{{% else %}}
     instance
-    {{% endif %}}
+{{% endif %}}
     tmpdir
     zopepy
     chown
     backup
     repozo
 
-    {{% if production.cluster %}}
+{{% if production.cluster %}}
     ${buildout:haproxy-parts}
     ${buildout:varnish-parts}
     ${buildout:nginx-parts}
-    {{% endif %}}
+{{% endif %}}
 
 extends =
     packages.cfg
     buildout.d/lxml.cfg
-    {{% if production.cluster %}}
+{{% if production.cluster %}}
     buildout.d/haproxy.cfg
     buildout.d/varnish.cfg
     buildout.d/nginx.cfg
-    {{% endif %}}
+{{% endif %}}
 
 # Create local caches so we get self contained buildouts
 # Note: this directories must exist on the remote server

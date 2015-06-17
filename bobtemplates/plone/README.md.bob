@@ -14,18 +14,16 @@ This project templates provides a full blown Plone project environment. It comes
 ## Installation
 
 This buildout is intended to be used via the development profile to provide
-a ready to work on setup. The relevant steps to get started with a new
-development environment would be:
+a ready to work on setup. To get started with a new development environment
+clone the buildout to your local machine and initialize the buildout:
 
 ``` bash
-$ virtualenv-2.7 {{{ package.namespace }}}
+$ git clone git@github.com:username/{{{ package.namespace }}}.git
 $ cd ./{{{ package.namespace }}}
-$ git clone git@github.com:username/{{{ package.namespace }}}.git buildout.{{{ package.namespace }}}
-$ cd ./buildout.{{{ package.namespace }}}
-$ python bootstrap.py -c development.cfg
+$ virtualenv-2.7 .
+$ ./bin/pip install zc.buildout
 $ bin/buildout -Nc development.cfg
 ```
-
 
 ## Configuration
 
