@@ -26,9 +26,6 @@ custom =
 addon =
   Pillow
   Plone
-  plone.app.caching
-  plone.app.contenttypes
-  plone.app.widgets
   tus
 
 test =
