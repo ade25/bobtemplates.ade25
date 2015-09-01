@@ -27,4 +27,16 @@ $ bin/buildout -Nc development.cfg
 
 ## Configuration
 
-The generated buildout asumes that the developer has setup a local egg cache and therefore provides a buildout 'default.cfg'.
+The generated buildout asumes that the developer has setup a local egg cache and therefore provides a buildout 'default.cfg' containing:
+
+``` ini
+[buildout]
+eggs-directory      = /home/yourusername/.buildout/eggs
+download-cache      = /home/yourusername/.buildout/downloads
+extends-cache       = /home/yourusername/.buildout/extends
+
+socket-timeout      = 3
+
+[fabric]
+username            = yourusername
+```
