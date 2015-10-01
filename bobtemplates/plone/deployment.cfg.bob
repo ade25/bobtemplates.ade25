@@ -30,6 +30,7 @@ parts =
 extends =
     packages.cfg
     buildout.d/lxml.cfg
+    secret.cfg
 {{% if production.cluster %}}
     buildout.d/haproxy.cfg
     buildout.d/varnish.cfg
