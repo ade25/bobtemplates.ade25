@@ -10,7 +10,9 @@ fabric-parts =
 [fabric]
 username = ade25-devops
 host = {{{ production.hostname }}}
+host_staging = {{{ production.hostname }}}
 hostname = {{{ production.hostname }}}.ade25.de
+hostname_staging = {{{ production.hostname }}}.ade25.de
 {{% if production.cluster %}}
 webserver = ${buildout:directory}
 {{% else %}}
@@ -26,5 +28,10 @@ eggs=
 
 [fabric-config]
 recipe = collective.recipe.template
+{{% if production.cluster %}}
+${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-cluster.py.tmpl
+{{ else %}}
+${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-project.py.tmpl
+{{% endif %}}
 input = ${buildout:directory}/buildout.d/fabfile.py.in
 output = ${buildout:directory}/fabfile.py
