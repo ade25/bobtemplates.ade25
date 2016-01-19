@@ -29,9 +29,8 @@ eggs=
 [fabric-config]
 recipe = collective.recipe.template
 {{% if production.cluster %}}
-${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-cluster.py.tmpl
+input = ${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-cluster.py.tmpl
 {{ else %}}
-${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-project.py.tmpl
+input = ${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-project.py.tmpl
 {{% endif %}}
-input = ${buildout:directory}/buildout.d/fabfile.py.in
 output = ${buildout:directory}/fabfile.py
