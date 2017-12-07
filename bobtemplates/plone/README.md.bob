@@ -29,7 +29,7 @@ Alternatively you can use the provided installation script
 
 ```bash
 chmod 777 ./bootstrap.sh
-./bootstrap.sh -c development.cfg
+./bootstrap.sh
 ```
 
 ## Configuration
