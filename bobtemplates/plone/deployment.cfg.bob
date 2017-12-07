@@ -253,7 +253,7 @@ interpreter = zopepy
 
 [repozo]
 recipe = zc.recipe.egg
-eggs = ZODB3
+eggs = ZODB
 scripts = repozo
 
 [backup]
