@@ -25,6 +25,13 @@ $ ./bin/pip install zc.buildout
 $ bin/buildout -Nc development.cfg
 ```
 
+Alternatively you can use the provided installation script
+
+```bash
+chmod 777 ./bootstrap.sh
+./bootstrap.sh
+```
+
 ## Configuration
 
 The generated buildout asumes that the developer has setup a local egg cache and therefore provides a buildout 'default.cfg' containing:

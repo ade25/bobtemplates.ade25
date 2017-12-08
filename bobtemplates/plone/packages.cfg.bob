@@ -21,7 +21,10 @@ main =
 #   myproject.sitecontent
 
 custom =
-  ade25.toolbar
+  ade25.base
+  ade25.panelpage
+  ade25.sitecontent
+  ade25.widgets
 
 addon =
   Pillow
@@ -48,9 +51,12 @@ devtools =
 
 # Additional checkouts
 ade25.banner        = git git@github.com:ade25/ade25.banner.git
-bobtemplates.ade25  = git git@github.com:ade25/bobtemplates.ade25.git
-ade25.toolbar       = git git@github.com:ade25/ade25.toolbar.git
-ade25.typekit       = git git@github.com:ade25/ade25.typekit.git
+ade25.base          = git git@github.com:ade25/ade25.base.git
+ade25.contacts      = git git@github.com:ade25/ade25.contacts.git
 ade25.fabfiles      = git git@github.com:ade25/ade25.fabfiles.git
 ade25.panelpage     = git git@github.com:ade25/ade25.panelpage.git
+ade25.sitecontent   = git git@github.com:ade25/ade25.sitecontent.git
+ade25.widgets       = git git@github.com:ade25/ade25.widgets.git
+# Additional tools
+bobtemplates.ade25  = git git@github.com:ade25/bobtemplates.ade25.git
 sauna.reload        = git https://github.com/epeli/sauna.reload.git
