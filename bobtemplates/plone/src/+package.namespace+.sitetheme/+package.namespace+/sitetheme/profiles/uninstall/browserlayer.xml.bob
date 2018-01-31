@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layers>
+    <layer
+            name="{{{ package.namespace }}}.sitetheme"
+            interface="{{{ package.namespace }}}.sitetheme.interfaces.I{{{ package.namespace.capitalize() }}}SiteThemeLayer"
+            remove="true"
+    />
+</layers>
