@@ -30,7 +30,7 @@ eggs=
 recipe = collective.recipe.template
 {{% if production.cluster %}}
 input = ${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-cluster.py.tmpl
-{{ else %}}
+{{% else %}}
 input = ${buildout:directory}/src/ade25.fabfiles/ade25/fabfiles/fabfile-project.py.tmpl
 {{% endif %}}
 output = ${buildout:directory}/fabfile.py
