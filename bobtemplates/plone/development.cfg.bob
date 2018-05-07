@@ -5,6 +5,7 @@
 parts =
     ${buildout:lxml-parts}
     ${buildout:fabric-parts}
+    ${buildout:site-parts}
     instance-debug
     tmpdir
     omelette
@@ -20,6 +21,7 @@ parts =
 extends =
     buildout.d/lxml.cfg
     buildout.d/fabric.cfg
+    buildout.d/site.cfg
     packages.cfg
 
 
