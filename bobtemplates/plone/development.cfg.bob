@@ -56,6 +56,12 @@ environment-vars =
 zope-conf-additional =
     %import sauna.reload
 
+
+# Change the site name to the appropriate value
+# This variable will be used to configure the docker webserver container
+[site]
+sitename = {{{ package.namespace }}}
+
 # Change the site-id to the appropriate value
 # This variable will be used to compose filesystem paths
 [plone-site]
